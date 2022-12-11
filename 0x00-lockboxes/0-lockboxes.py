@@ -37,7 +37,9 @@ def setKeys(box, keyList, boxesUnlock):
     if box:
         for key in box:
             if isInteger(key):
-                if key < len(boxesUnlock) and keyList.count(key) == 0 and boxesUnlock[key] == 0:
+                if (key < len(boxesUnlock)
+                    and keyList.count(key) == 0
+                        and boxesUnlock[key] == 0):
                     keyList.append(key)
 
 
