@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 
 def canUnlockAll(boxes):
+    """
+    function to find the key
+    """
     if not boxes or (type(boxes) != list):
         return False
     keyList = []
@@ -22,6 +25,9 @@ def canUnlockAll(boxes):
 
 
 def unlockBox(keys, boxesUnlock, boxes):
+    """
+    function to use the key
+    """
     keys_copy = []
     if len(keys) > 0:
         if keys[0] < len(boxesUnlock):
@@ -34,6 +40,9 @@ def unlockBox(keys, boxesUnlock, boxes):
 
 
 def setKeys(box, keyList, boxesUnlock):
+    """
+    function to set the key
+    """
     if box:
         for key in box:
             if isInteger(key):
@@ -44,6 +53,9 @@ def setKeys(box, keyList, boxesUnlock):
 
 
 def setBoxesUnlock(count):
+    """
+    function to save the boxes unlock
+    """
     boxes = []
     for i in range(count):
         boxes.append(0)
@@ -51,6 +63,9 @@ def setBoxesUnlock(count):
 
 
 def isInteger(str):
+    """
+    function to check if is integer
+    """
     is_int = True
     try:
         int(str)
